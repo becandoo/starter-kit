@@ -1,0 +1,6 @@
+
+
+//text colors using mixin ui-colors
+.text {
+    @include ui-colors($foundation-palette);
+  }

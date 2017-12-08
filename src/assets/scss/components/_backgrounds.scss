@@ -1,0 +1,25 @@
+// stylelint-disable declaration-no-important
+
+@each $color, $value in $foundation-palette {
+    @include bg-variant(".bg-#{$color}", $value);
+  }
+  
+  @if $enable-gradients {
+    @each $color, $value in $foundation-palette {
+      @include bg-gradient-variant(".bg-gradient-#{$color}", $value);
+    }
+  }
+
+  //change background color using color palette and mixin. usage: swatch-$color
+.swatch {
+    @include ui-bg-colors($foundation-palette);
+}
+  
+  .bg-white {
+    background-color: $white !important;
+  }
+  
+  .bg-transparent {
+    background-color: transparent !important;
+  }
+  
